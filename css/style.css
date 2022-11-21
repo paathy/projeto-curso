@@ -1,43 +1,123 @@
+
+
 *{
+    font-family: "Open sans", sans-serif;
     margin: 0;
-    padding: 0;
+    letter-spacing: 0;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body{ 
-    font-family: 'Verdana, sans-serif';
-    background: rgb(228, 177, 243);
+body{
+    background-color: rgb(228, 177, 243);
     color: rgb(218, 63, 205);
+    font-size: 16px;
+    padding: 2rem 0;
+    min-height: 100vh;
 
 }
 
+h2{
+    color: #000;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 3rem;
+    text-align: center;
+}
 
+h2::after{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background-color: #7ac402;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 
-main.cards{
+.slider{
     display: flex;
-    padding: 32px;
-}
+}  
 
-main.cards section.cards{
+.slider .card{
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    -webkit-box-shadow: 4px 4px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 5px 1px rgba(0,0,0,0.75);
+    width: 100%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 1rem 1.5rem;
-    border-radius: 15px;
-    margin-right: 256px;
-    margin-left: 50px;
 }
 
-main.cards section.card.icon{
-    width: 64px;
-    height: 64px;
-   
+.slider .card .like{
+    background-image: url(https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/75c124c5a1b82f9168513e17dfae83f4fc4d0857/slider-produtos-simples/assets/images/ic-heart.png);
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
+    display: flex;
+    place-self: flex-end;
+    margin-bottom: 0.3rem;
+    transition: 0.3s all ease;
+    cursor: pointer;
 }
 
+.slider .card .like:hover{
+    background-image: url(https://raw.githubusercontent.com/Cassianosch/programador.cs-reels/75c124c5a1b82f9168513e17dfae83f4fc4d0857/slider-produtos-simples/assets/images/ic-heart-red.png);
+}
 
-main.cards section.card img{
+.slider .card img.produto{
     width: 100%;
-    border-radius: 15px;
 }
+
+.slider .card .titulo{
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0.5rem 0;
+
+}
+
+.slider .card .rating{
+    color: #ffc002;
+}
+
+.slider .card .price{
+    display: flex;
+    gap: 10px;
+    margin: 0.5rem 0;
+}
+
+.slider .card .price h5:first-child{
+    font-weight: 400;
+    text-decoration: line-through;
+    color:#b3b4b8
+}
+
+.slider .card .price h5:nth-child(2){
+    font-weight: 600;
+    color: #48494d;
+}
+
+.slider .card a.button{
+    border: 1px solid #7ac402;
+    border-radius:30px;
+    color:#7ac402;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.slider .card a.button:hover {
+    background-color:#7ac402;
+    color:#eee1e7;
+}
+
 
