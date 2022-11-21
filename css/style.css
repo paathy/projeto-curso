@@ -122,6 +122,9 @@ h2::after{
 }
 
 .eu{
+    font-family: Verdana, sans-serif;
+    color: rgb(235, 38, 186);
+    font-weight: 600;
     background-color:pink;
     padding: 0%;
     margin: 15px;
